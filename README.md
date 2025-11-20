@@ -1,3 +1,4 @@
-# Core-Explore Fitness Weebsite
-For the repository of the website, soulsync-fitness in application development. You can upload your assigned pages/component to the designated folder.
+# Core-Explore Fitness Website
+For the repository of the website, Core-Explore in application development. You can upload your assigned pages/componen
+t to the designated folder.
 
