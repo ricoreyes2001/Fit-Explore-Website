@@ -5,50 +5,82 @@ const AboutUs = () => {
   const teamMembers = [
     { name: "Paul Padasas", role: "Certified Trainer" },
     { name: "Mark Navarra & Rico Reyes", role: "Mobility & Strength Expert" },
-    { name: "Karl Christian Canlas & Dharellene Mae Selfaison", role: "Nutrition Specialist" },
+    {
+      name: "Karl Christian Canlas & Dharellene Mae Selfaison",
+      role: "Nutrition Specialist",
+    },
   ];
 
   const features = [
-    { title: "Exercise Library", desc: "Browse a variety of exercises sorted by muscle group and difficulty." },
-    { title: "Custom Plans", desc: "Create and follow workout plans tailored to your goals." },
-    { title: "Progress Tracking", desc: "Log your workouts and view your improvements over time." },
+    {
+      title: "Exercise Library",
+      desc: "Browse a variety of exercises sorted by muscle group and difficulty.",
+    },
+    {
+      title: "Custom Plans",
+      desc: "Create and follow workout plans tailored to your goals.",
+    },
+    {
+      title: "Progress Tracking",
+      desc: "Log your workouts and view your improvements over time.",
+    },
   ];
 
   return (
-    <div className="relative min-h-screen">
-      {/* Background image */}
+    <div className="relative min-h-screen font-[Poppins]">
+      {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('/path/to/your/background-image.jpg')` }}
+        style={{ backgroundImage: "url('/assets/about-bg.jpg')" }}
       >
-        <div className="absolute inset-0 bg-black/60"></div> {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/70"></div>
       </div>
 
+      {/* Content */}
       <div className="relative z-10">
         <Navbar />
 
-        <div className="container mx-auto px-6 py-20 text-white">
-          <h1 className="text-4xl font-bold text-center mb-8">About Us</h1>
-          <p className="text-lg leading-relaxed max-w-3xl mx-auto mb-12 text-center font-['Josefin_Sans']">
-            Welcome to <strong>Fit Explore</strong>. Our goal is to provide a clean, easy-to-use, and modern fitness platform where users can learn exercises, build workout plans, and track their progress.
+        <div className="max-w-6xl mx-auto px-6 py-20 text-white">
+          <h1 className="text-5xl font-bold text-center mb-8 tracking-wide">
+            About Us
+          </h1>
+
+          <p className="text-lg max-w-3xl mx-auto text-center leading-relaxed text-gray-200 font-['Josefin_Sans'] mb-16">
+            Welcome to <strong>Fit Explore</strong> — your clean, modern, and
+            easy-to-use fitness platform. Learn exercises, create workout plans,
+            and track your progress with simplicity and style.
           </p>
 
-          <h2 className="text-2xl font-semibold mb-6 text-center">What We Do</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          {/* What We Do */}
+          <h2 className="text-3xl font-semibold text-center mb-10 tracking-wide">
+            What We Do
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
             {features.map((feature, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-xl shadow-md text-center text-black">
+              <div
+                key={idx}
+                className="bg-white/90 p-7 rounded-xl shadow-lg text-black hover:scale-105 transition transform"
+              >
                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p>{feature.desc}</p>
+                <p className="text-gray-700 leading-relaxed">{feature.desc}</p>
               </div>
             ))}
           </div>
 
-          <h2 className="text-2xl font-semibold mb-6 text-center">Our Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Our Team */}
+          <h2 className="text-3xl font-semibold text-center mb-10 tracking-wide">
+            Our Team
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {teamMembers.map((member, idx) => (
-              <div key={idx} className="text-center p-6 bg-white rounded-xl shadow-md text-black">
+              <div
+                key={idx}
+                className="bg-white/90 p-7 rounded-xl shadow-lg text-black hover:scale-105 transition transform"
+              >
                 <h3 className="text-xl font-bold mb-2">{member.name}</h3>
-                <p>{member.role}</p>
+                <p className="text-gray-700">{member.role}</p>
               </div>
             ))}
           </div>
